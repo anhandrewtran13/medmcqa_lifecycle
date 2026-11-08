@@ -1,6 +1,6 @@
-# MedMCQA Lifecycle (Neurosymbolic)
+# MedMCQA Lifecycle
 
-FLOW-RAG / Lifecycle Model on **MedMCQA** (GPU server), config-driven.
+FLOW-RAG / Lifecycle Model on **MedMCQA** (GPU server), config-driven. 
 
 ## Layout
 
