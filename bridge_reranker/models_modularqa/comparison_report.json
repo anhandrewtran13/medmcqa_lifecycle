@@ -1,0 +1,29 @@
+{
+  "n_train_questions": 2529,
+  "n_val_questions": 446,
+  "feature_cols": [
+    "feature_nli_grounding_score",
+    "feature_bridge_quality_bonus",
+    "feature_combined_heuristic_score",
+    "feature_rank_by_heuristic",
+    "feature_group_size",
+    "feature_mutex_score",
+    "feature_has_mutex_score",
+    "feature_in_conflict",
+    "feature_claim_text_len",
+    "feature_value_len",
+    "feature_value_word_count",
+    "feature_has_digit_in_value",
+    "feature_entity_overlap_with_question",
+    "feature_claim_text_overlap_with_question",
+    "feature_title_in_question",
+    "feature_retrieval_rank",
+    "feature_hop1_query_score",
+    "feature_slot_prefix_code"
+  ],
+  "current_heuristic_top1_acc_val": 0.24663677130044842,
+  "lightgbm_top1_acc_val": 0.5964125560538116,
+  "xgboost_top1_acc_val": 0.5919282511210763,
+  "lightgbm_lift_over_heuristic": 0.3497757847533632,
+  "xgboost_lift_over_heuristic": 0.34529147982062786
+}

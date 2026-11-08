@@ -1,0 +1,19 @@
+{
+  "description": "Fast smoke (10 examples) after Gemma-3 bf16 fix",
+  "dataset": "medmcqa",
+  "split": "validation",
+  "index_start": 0,
+  "index_end": 10,
+  "index_rebuild": true,
+  "model": "google/gemma-3-4b-it",
+  "load_in_4bit": false,
+  "llm_batch_size": 2,
+  "phase_b_llm_batch_size": 1,
+  "cpu_workers": 4,
+  "use_bridge_reranker": true,
+  "use_sf_labeler": false,
+  "use_pretrained_hop1": false,
+  "medmcqa_answer_as": "letter",
+  "smoke_test_llm": true,
+  "run_name": "smoke_medmcqa_0_10_bf16"
+}

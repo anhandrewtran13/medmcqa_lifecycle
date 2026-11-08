@@ -1,0 +1,3702 @@
+{
+  "base": "S2_multihop_modularqa",
+  "treat": "S3_lifecycle",
+  "shards": [
+    "medmcqa_val_0_1000_bf16",
+    "medmcqa_val_1000_2000_bf16",
+    "medmcqa_val_2000_3000_bf16",
+    "medmcqa_val_3000_4183_bf16"
+  ],
+  "n": 4183,
+  "both_right": 1209,
+  "both_wrong": 1917,
+  "s2_only_correct": 619,
+  "s3_only_correct": 438,
+  "em_base": 0.43700693282333253,
+  "em_treat": 0.3937365527133636,
+  "net_em_delta_treat_minus_base": -0.04327038010996892,
+  "gold_dist": {
+    "B": 1085,
+    "A": 1348,
+    "D": 825,
+    "C": 925
+  },
+  "pred_dist_s2": {
+    "B": 692,
+    "D": 1282,
+    "C": 1235,
+    "A": 974
+  },
+  "pred_dist_s3": {
+    "B": 789,
+    "D": 1322,
+    "C": 1110,
+    "A": 962
+  },
+  "s3_status_dist": {
+    "": 4183
+  },
+  "top_letter_flips_s2_correct_s3_wrong": [
+    {
+      "s2": "A",
+      "s3": "B",
+      "gold": "A",
+      "count": 82
+    },
+    {
+      "s2": "A",
+      "s3": "D",
+      "gold": "A",
+      "count": 78
+    },
+    {
+      "s2": "C",
+      "s3": "D",
+      "gold": "C",
+      "count": 74
+    },
+    {
+      "s2": "B",
+      "s3": "D",
+      "gold": "B",
+      "count": 55
+    },
+    {
+      "s2": "C",
+      "s3": "A",
+      "gold": "C",
+      "count": 51
+    },
+    {
+      "s2": "D",
+      "s3": "A",
+      "gold": "D",
+      "count": 48
+    },
+    {
+      "s2": "B",
+      "s3": "A",
+      "gold": "B",
+      "count": 45
+    },
+    {
+      "s2": "A",
+      "s3": "C",
+      "gold": "A",
+      "count": 43
+    },
+    {
+      "s2": "C",
+      "s3": "B",
+      "gold": "C",
+      "count": 43
+    },
+    {
+      "s2": "D",
+      "s3": "C",
+      "gold": "D",
+      "count": 41
+    },
+    {
+      "s2": "D",
+      "s3": "B",
+      "gold": "D",
+      "count": 30
+    },
+    {
+      "s2": "B",
+      "s3": "C",
+      "gold": "B",
+      "count": 29
+    }
+  ],
+  "samples_s2_win": [
+    {
+      "example_id": "c6f28135-76b7-4762-bd13-839b1592e3d3",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "D",
+      "s3_pred": "B",
+      "question": "All of the following are developed from Meckel's cartilage except:\n\nA. Zygomatic bone\nB. Malleus\nC. Incus\nD. Stapes\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "All of the following are developed from Meckel's cartilage except All of the following are developed from Meckel's cartilage except:\n\nA. Zygomatic",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "dc8f8f08-ca45-4ad5-ad3f-278eb9e2bd49",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "C",
+      "question": "Which of the following best describes the resistance form in endodontic root canal preparation?\n\nA. The establishment of apical tug back resistance to prevent the apical root fracture during obturation\nB. The cavity form which is obtained for application of condenser in vertical ",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "Which of the following best describes the resistance form in endodontic root canal preparation Which of the following best describes the resistance form in endodontic root can",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "7627eb54-4499-45d0-ba1f-1c8dbc6f2342",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "D",
+      "s3_pred": "C",
+      "question": "Iron is present in all, EXCEPT\n\nA. Myoglobin\nB. Cytochrome\nC. Catalase\nD. Pyruvate kinase\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "Iron is present in all Iron is present in all, EXCEPT\n\nA. Myoglobin\nB. Cytochrome\nC. Catalase\nD. Pyruva",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "62081a5c-5ffc-4a88-9aca-c9e430490e73",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "D",
+      "question": "A female with suspected child abuse was brought to the casualty with severe bleeding from the perineum. What should be the first line of management?\n\nA. Airway maintenance\nB. Internal iliac aery ligation\nC. Whole blood transfusion\nD. Inform police before staing the treatment\n\nAns",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "D",
+          "hop2_query": "A female with suspected child abuse was brought to the casualty with severe bleeding from the perineum actor actress biography",
+          "retrieved": [
+            "opt_D",
+            "opt_A",
+            "opt_B",
+            "opt_C"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "0f2b4bd8-8032-44cf-bf8e-ff24900ded1e",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "D",
+      "question": "26 year old, 6 feet 4 inch male presented to the emergency depament with complaints of acute onset dysnea. On examination, he was tachypneic, other vitals were stable. A chest xray was done which shown the following pathology:\n\nA. Pneumothorax\nB. Hydropnemo thorax\nC. Massive pleu",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "On examination 26 year old, 6 feet 4 inch male presented to the emergency depament with complai",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "34f8fb1a-a365-40d0-a804-6b061a9a04f5",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "B",
+      "question": "Point used as termination of Root canal procedure is\n\nA. Apical constriction\nB. Apical foramen\nC. Both\nD. None\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "Point used as termination of Root canal procedure is\n\nA Point used as termination of Root canal procedure is\n\nA. Apical constriction\nB. ",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "67add9f9-94b5-40b2-904d-fb4965fb8309",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "D",
+      "s3_pred": "A",
+      "question": "In Erythroblastosis fetalis not involved is \u2013\n\nA. Anti C\nB. Anti D\nC. Anti E\nD. Anti Lewis\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "In Erythroblastosis fetalis not involved is In Erythroblastosis fetalis not involved is \u2013\n\nA. Anti C\nB. Anti D\nC. Anti E\nD. ",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "f1586168-b5a9-4b50-acf4-f0575cfb10ea",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "D",
+      "s3_pred": "C",
+      "question": "Pulmonary-renal syndromes include-\n\nA. Goodpasture\nB. Leptospirosis\nC. Hantavirus and Wegner's\nD. All\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "Pulmonary-renal syndromes include-\n\nA Pulmonary-renal syndromes include-\n\nA. Goodpasture\nB. Leptospirosis\nC. Hantaviru",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "0c4f5b5b-25ec-459f-9872-a01bc925f211",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "B",
+      "question": "NESTROFT test is a screening test for \u2013\n\nA. \u03b2\u2013thalassemia\nB. Hereditary spherocytosis\nC. Autoimmune hemolytic anemia\nD. Megaloblastic anemia\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "NESTROFT test is a screening test for NESTROFT test is a screening test for \u2013\n\nA. \u03b2\u2013thalassemia\nB. Hereditary spherocy",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "eda38a61-8191-470a-a712-84502a7ef918",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "C",
+      "s2_pred": "C",
+      "s3_pred": "B",
+      "question": "Bonding agents have hydrophilic and hydrophobic groups. The hydrophobic group binds which structure?\n\nA. Calcium in enamel\nB. Hydroxyapatite group in hard tissue\nC. Resin in restoration\nD. Collagen in dentin\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Bonding agents have hydrophilic and hydrophobic groups Bonding agents have hydrophilic and hydrophobic groups. The hydrophobic group bi",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "c0ed32bb-dbf2-4184-91f0-ee93c27f119f",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "B",
+      "question": "The transport of CO is diffusion limited because\n\nA. Binds avidly with Hb\nB. Partial pressure of CO is less\nC. CO is less absorbed in water\nD. Alveolar membrane is less permeable\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "The transport of CO is diffusion limited because\n\nA The transport of CO is diffusion limited because\n\nA. Binds avidly with Hb\nB. Par",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "954a6f85-767c-4b3a-b422-c5986e63f77b",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "D",
+      "s3_pred": "C",
+      "question": "Excessive occlusal forces can be superimposed in all cases, except\n\nA. Normal periodontium with normal height of bone\nB. Normal periodontium with reduced height of bone\nC. Marginal periodontitis with reduced height of bone\nD. Marginal periodontitis with normal height of bone\n\nAns",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Excessive occlusal forces can be superimposed in all cases Excessive occlusal forces can be superimposed in all cases, except\n\nA. Normal pe",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "f3f3ad74-951f-4907-913d-f5c6c6c2dd2a",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "D",
+      "s3_pred": "A",
+      "question": "Which of the following is not a pa of the quadruple test for antenatal detection of Down syndrome?\n\nA. AFP\nB. Estriol\nC. Beta HCG\nD. Inhibin B\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "Which of the following is not a pa of the quadruple test for antenatal detection of Down syndrome Which of the following is not a pa of the quadruple test for antenatal detection",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "ba4749e2-e5f5-4a98-8663-2b703e280c6c",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "D",
+      "question": "Rearrange the sequence of hand washing: a. b. c. d.\n\nA. a,c,d,b\nB. b,c,a,d\nC. d,a,c,b\nD. c,a,b,d\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Rearrange the sequence of hand washing Rearrange the sequence of hand washing: a. b. c. d.\n\nA. a,c,d,b\nB. b,c,a,d\nC. d,",
+          "retrieved": [
+            "opt_A",
+            "opt_C",
+            "opt_D",
+            "opt_B"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "ae4e70ec-f2cc-4afa-b122-cdb5a4eede13",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "B",
+      "question": "Hematuria during labour in previous LSCS is sign\n\nA. Impending rupture of scar\nB. Urethral trauma\nC. Prolong labour\nD. Sepsis\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Hematuria during labour in previous LSCS is sign\n\nA Hematuria during labour in previous LSCS is sign\n\nA. Impending rupture of scar\nB",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "2df0c27e-46a1-4f96-9de7-fb847c80a454",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "B",
+      "question": "Nowadays, swine flu is in news, it is considered as\n\nA. Pandemic\nB. Epidemic\nC. Endemic\nD. Seasonal variation\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "Nowadays Nowadays, swine flu is in news, it is considered as\n\nA. Pandemic\nB. Epidemic\nC. ",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "b973cb7b-da19-43d1-a05c-7fa5ec994cdc",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "D",
+      "question": "Yellowish-brown staining of the IOPA dental X-ray film is due to:\n\nA. Immersion in fixer without washing\nB. Increased temperature of developer\nC. Increased exposure time\nD. Drying away of the developer solution\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "Yellowish-brown staining of the IOPA dental X-ray film is due to Yellowish-brown staining of the IOPA dental X-ray film is due to:\n\nA. Immersion ",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "73d2ddbf-2000-467a-bc80-124ea437da9c",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "D",
+      "s3_pred": "C",
+      "question": "Surgery on the hard palate of a 3 years old cleft patient may inhibit growth, causing the facial profile to become:\n\nA. Straight\nB. Elongated\nC. Shortened\nD. More concave\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "Surgery on the hard palate of a 3 years old cleft patient may inhibit growth Surgery on the hard palate of a 3 years old cleft patient may inhibit growth, ca",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "cf442471-776c-434b-8186-a07315839c06",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "D",
+      "question": "What percentage of accessory canals found in apical third of the root\n\nA. 74%\nB. 54%\nC. 94%\nD. 60%\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "D",
+          "hop2_query": "What percentage of accessory canals found in apical third of the root\n\nA What percentage of accessory canals found in apical third of the root\n\nA. 74%\nB.",
+          "retrieved": [
+            "opt_D",
+            "opt_A",
+            "opt_B",
+            "opt_C"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "b934e553-46ba-4692-a9cc-cc1ae26e7d4f",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "B",
+      "s2_pred": "B",
+      "s3_pred": "C",
+      "question": "An 80 kg male patient presented to the emergency with hypotension and you have been instructed to sta him on an inotrope at a dose of 10 mcg/kg/min. Each 5 mL amp of the drug contains 200 mg drug. You choose 2 ampules of the drug and decide to mix it with saline to make a 250 mL ",
+      "s2": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "An 80 kg male patient presented to the emergency with hypotension and you have been instructed to sta him on an inotrope at a dose of 10 mcg An 80 kg male patient presented to the emergency with hypotension and you have b",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "e9c312b7-2cc1-41ec-8daa-a55d69514721",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "B",
+      "s2_pred": "B",
+      "s3_pred": "D",
+      "question": "Thyroglossal fistula is:\n\nA. Lined by squamous epithelium\nB. Causes a bulge in neck\nC. Inflammatory lesion\nD. Precancerous lesion\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A. Lined by squamous epithelium",
+          "hop2_query": "Thyroglossal fistula is Thyroglossal fistula is:\n\nA. Lined by squamous epithelium\nB. Causes a bulge in n",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "965fa6a2-969e-4b51-bdb7-934a02c809f6",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "A",
+      "s3_pred": "D",
+      "question": "Peau d'orange in carcinoma breast is due to:\n\nA. Obstruction of sub-dermal lymphatics\nB. Infiltration of Cooper's ligament\nC. Hematogenous dissemination\nD. Hematogenous dissemination\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "Peau d'orange in carcinoma breast is due to Peau d'orange in carcinoma breast is due to:\n\nA. Obstruction of sub-dermal lymph",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "133b6b41-ac32-4d94-b0c8-9004aa2214f4",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "C",
+      "s2_pred": "C",
+      "s3_pred": "D",
+      "question": "Name the structure marked with arrow\n\nA. Mitochondria\nB. Golgi bodies\nC. Secretory vesicles\nD. Rough Endoplasmic reticulum\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "Name the structure marked with arrow\n\nA Name the structure marked with arrow\n\nA. Mitochondria\nB. Golgi bodies\nC. Secreto",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "97028381-fe2a-4c81-9f67-b3125061d7ae",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "B",
+      "s2_pred": "B",
+      "s3_pred": "D",
+      "question": "Which of these is not a theory of TMJ ankylosis?\n\nA. Calcification in the soft tissues around the joint space\nB. Synovial fluid attracting calcium ions\nC. Lateral displacement of fracture condyle with fusion  with zygomatic bone\nD. Condylar burst\n\nAnswer with a single letter (A, ",
+      "s2": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Which of these is not a theory of TMJ ankylosis Which of these is not a theory of TMJ ankylosis?\n\nA. Calcification in the soft t",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "069b7516-54c4-4e5d-acf7-a7c92fdd2a01",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "C",
+      "s2_pred": "C",
+      "s3_pred": "D",
+      "question": "The zygomatic bone does not articulate with:\n\nA. Frontal bone\nB. Maxillary bone\nC. Nasal bone\nD. Temporal bone\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "The zygomatic bone does not articulate with The zygomatic bone does not articulate with:\n\nA. Frontal bone\nB. Maxillary bone\n",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    }
+  ],
+  "samples_s3_win": [
+    {
+      "example_id": "e3840b78-8e45-4c14-83da-2a1ed7178d7e",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "C",
+      "s2_pred": "D",
+      "s3_pred": "C",
+      "question": "Which of the following is used for etching porcelain?\n\nA. 1.23% HF\nB. 4% HF\nC. 9.6% HF\nD. 37% HF\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A. 1.23% HF",
+          "hop2_query": "Which of the following is used for etching porcelain Which of the following is used for etching porcelain?\n\nA. 1.23% HF\nB. 4% HF\nC. 9",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_D",
+            "opt_C"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "c1ad828e-687d-4f0b-b014-9b0b5555548e",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "C",
+      "s3_pred": "D",
+      "question": "All are true about RVG except:\n\nA. 80% reduction of patient exposure\nB. Instant imaging\nC. Easy to storage and retrieval.\nD. Image is sharper than caused by silver halide.\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "D",
+          "hop2_query": "All are true about RVG except All are true about RVG except:\n\nA. 80% reduction of patient exposure\nB. Instant ",
+          "retrieved": [
+            "opt_D",
+            "opt_A",
+            "opt_B",
+            "opt_C"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "76ba3417-012e-4bf8-840c-13bb7bc60dcc",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "B",
+      "s3_pred": "A",
+      "question": "Teeth that erupt in 30 days of birth\n\nA. Neonatal teeth\nB. Natal teeth\nC. Premature teeth\nD. None\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "Teeth that erupt in 30 days of birth\n\nA Teeth that erupt in 30 days of birth\n\nA. Neonatal teeth\nB. Natal teeth\nC. Premat",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "7cea5a22-d408-4fce-b026-381149dfd0b3",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "B",
+      "s3_pred": "D",
+      "question": "Centre of rotation during intrusion is at:\n\nA. Infinity\nB. Middle third of tooth\nC. CEJ\nD. Outside the tooth\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Centre of rotation during intrusion is at Centre of rotation during intrusion is at:\n\nA. Infinity\nB. Middle third of tooth",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "7b81cd07-3765-4f50-8b28-a88576f4223e",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "B",
+      "s2_pred": "A",
+      "s3_pred": "B",
+      "question": "A child's behaviour is traced to have dental difficulties\nfrom\this\tmother.\tThe\tmost\tsatisfactory\tmethod\tof\nhandling the situation is to:\n\nA. Introduce another child as a good example\nB. Modify his fear by familiarization\nC. Use small amounts of barbiturates\nD. Use firmness\n\nAnswe",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "A child's behaviour is traced to have dental difficulties\nfrom\this\tmother A child's behaviour is traced to have dental difficulties\nfrom\this\tmother.\tThe\tm",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "4798d605-979f-48e0-82ee-fea88cb40907",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "D",
+      "s3_pred": "A",
+      "question": "Korffs fibres are seen in:\n\nA. Mantle dentin\nB. Secondary dentin\nC. Reactionary dentin\nD. Indeed dermal tubules\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "D",
+          "hop2_query": "Korffs fibres are seen in Korffs fibres are seen in:\n\nA. Mantle dentin\nB. Secondary dentin\nC. Reactionary ",
+          "retrieved": [
+            "opt_D",
+            "opt_A",
+            "opt_B",
+            "opt_C"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "25357342-dfb9-4828-a49e-20f3701eb211",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "B",
+      "s2_pred": "D",
+      "s3_pred": "B",
+      "question": "Speech problems in cleft palate patients are due to\n\nA. Lisping of tongue\nB. Inability of soft palate to stop air to go into nasopharynx\nC. Inability of learning process\nD. All of the above\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Speech problems in cleft palate patients are due to\n\nA Speech problems in cleft palate patients are due to\n\nA. Lisping of tongue\nB. Ina",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "a8be5273-87e4-42d6-bdd2-e3ce0ba892c1",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "D",
+      "s3_pred": "A",
+      "question": "True about meningococcal vaccine is -\n\nA. Capsule polysaccharide act as a virulent factor for the production of antibody\nB. Conjugate vaccine is not given in outbreaks\nC. Polysaccharide vaccine should be given to children below 2 years of age\nD. Vaccine with polysaccharide B is i",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "True about meningococcal vaccine is -\n\nA True about meningococcal vaccine is -\n\nA. Capsule polysaccharide act as a virule",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "b8fad18b-75df-42b6-b06d-8902a10f6e16",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "B",
+      "s3_pred": "D",
+      "question": "Which of the following is not a feature of Juvenile Idiopathic Arthritis \u2013\n\nA. Rheumatoid nodule\nB. Spikes of high fever\nC. Uveitis\nD. Raynaud's phenomenon\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "Which of the following is not a feature of Juvenile Idiopathic Arthritis Which of the following is not a feature of Juvenile Idiopathic Arthritis \u2013\n\nA. R",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "a570d3c3-865a-41b6-8e21-dccbf7feec4c",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "C",
+      "s3_pred": "A",
+      "question": "A patient from,nqh-eastern states was diagnosed to have infection with P. falciparum malaria. What is the most appropriate drug for this patient?\n\nA. Aemether plus lumefantrine\nB. Sulfadoxine plus pyrimethamine\nC. Chloroquine\nD. Mefloquine\n\nAnswer with a single letter (A, B, C, o",
+      "s2": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "A patient from A patient from,nqh-eastern states was diagnosed to have infection with P. falcip",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "cbc66ce4-2ba3-4f5a-b22b-6640ac66581e",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "D",
+      "s3_pred": "A",
+      "question": "All are structures lying deep to the hyoglossus muscle except:\n\nA. Hypoglossal nerve\nB. Lingual artery\nC. Stylohyoid muscle\nD. Geniohyoid muscle\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "D",
+          "hop2_query": "All are structures lying deep to the hyoglossus muscle except All are structures lying deep to the hyoglossus muscle except:\n\nA. Hypoglossal n",
+          "retrieved": [
+            "opt_D",
+            "opt_A",
+            "opt_B",
+            "opt_C"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "86155521-ea6f-485e-b258-14c51d44578e",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "B",
+      "s3_pred": "A",
+      "question": "A 19-year-old woman presented with primary amenorrhea, sho stature, webbed neck and widely spaced nipples. Examination showed weak pulses in lower extremity and streak ovaries, raised FSH, no oocyte in histology of ovary. Karyotype most likely to be present:KCET 12; JIPMER 12; AI",
+      "s2": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "A 19-year-old woman presented with primary amenorrhea A 19-year-old woman presented with primary amenorrhea, sho stature, webbed neck ",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "d2b006ba-21fa-4ec8-bcda-760d55e8b326",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "C",
+      "s3_pred": "A",
+      "question": "To prevent sensitivity caused by acid etching and to protect pulp in deep cavities which of the following should be used.\n\nA. Ca(OH)2 liner\nB. ZOE\nC. Light cured GIC liner\nD. Varnish\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "To prevent sensitivity caused by acid etching and to protect pulp in deep cavities which of the following should be used To prevent sensitivity caused by acid etching and to protect pulp in deep caviti",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "f90856e7-a924-43b9-9e08-89b95508c61f",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "B",
+      "s2_pred": "A",
+      "s3_pred": "B",
+      "question": "Retromolar pad:\n\nA. Should not be covered by Low denture\nB. Should be covered by lower denture\nC. Has tendon of temporal muscle attached to it\nD. Disappears on eruption of mandibular last molars\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Retromolar pad Retromolar pad:\n\nA. Should not be covered by Low denture\nB. Should be covered by",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "66d7e017-f2f8-4325-8333-07c45a2fa0e7",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "C",
+      "s3_pred": "D",
+      "question": "Stretch fibers are present in striated muscle, innervation is carried by\n\nA. A delta fiber\nB. C fiber\nC. unmyelinated fiber\nD. Gamma fiber\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Stretch fibers are present in striated muscle Stretch fibers are present in striated muscle, innervation is carried by\n\nA. A d",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "e59188f6-856a-4300-a2fa-176a8a1b030a",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "C",
+      "s3_pred": "D",
+      "question": "A 55- year old diabetic patient presents with transient obscuration in vision for 2-3 days followed by sudden loss of vision. Which of the following would be the best test to evaluate the symptoms?\n\nA. Serum ACE levels\nB. Quantiferon-Gold TB test\nC. Elevated homocysteine levels\nD",
+      "s2": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "A 55- year old diabetic patient presents with transient obscuration in vision for 2-3 days followed by sudden loss of vision A 55- year old diabetic patient presents with transient obscuration in vision fo",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "5aeb3b7a-9012-4472-a233-740ba0f1dac5",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "B",
+      "s3_pred": "D",
+      "question": "Which of the following disease modifying anti-rheumatoid drugs acts by increasing extracellular adenosine?\n\nA. Leflunomide\nB. Hydroxychloroquine\nC. Azathioprine\nD. Methotrexate\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A. Leflunomide",
+          "hop2_query": "Which of the following disease modifying anti-rheumatoid drugs acts by increasing extracellular adenosine Which of the following disease modifying anti-rheumatoid drugs acts by increasin",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "7d79778c-de93-4463-b0d4-13ae234adaa8",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "D",
+      "s3_pred": "A",
+      "question": "Denture cleaning tablets include all, EXCEPT\n\nA. Hydrogen peroxide\nB. Alkaline material\nC. Sodium perborate\nD. Detergent\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "D",
+          "hop2_query": "Denture cleaning tablets include all Denture cleaning tablets include all, EXCEPT\n\nA. Hydrogen peroxide\nB. Alkaline m",
+          "retrieved": [
+            "opt_D",
+            "opt_A",
+            "opt_B",
+            "opt_C"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "efa0e92a-b11b-4c1c-a97d-8b4409430caa",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "B",
+      "s2_pred": "A",
+      "s3_pred": "B",
+      "question": "The resolution of IOPA is about:\n\nA. 10 Lp/mm\nB. 16 Lp/mm\nC. 28 Lp/mm\nD. 30 Lp/mm\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "The resolution of IOPA is about The resolution of IOPA is about:\n\nA. 10 Lp/mm\nB. 16 Lp/mm\nC. 28 Lp/mm\nD. 30 Lp/m",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "61d50780-6165-4945-ad76-ef08e193ec57",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "B",
+      "s2_pred": "A",
+      "s3_pred": "B",
+      "question": "A five year old male child presents with complaints of fever and abdominal distension. IIe is having vomiting for the last five days. On examination there are 6\u20138 Pus Cell/hpf in urine. WBC count shows 78% neutrophils. What is the best line of management \u2013\n\nA. Send urine for cult",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A.",
+          "hop2_query": "A five year old male child presents with complaints of fever and abdominal distension A five year old male child presents with complaints of fever and abdominal diste",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "ee3171ee-b65b-477b-9a73-ea8316b648aa",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "D",
+      "s3_pred": "A",
+      "question": "All of the following are features of systemic Juvenile Rheumatoid Arthritis except \u2013\n\nA. Uveitis\nB. Rash\nC. Fever\nD. Hepatosplenomegaly\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "D",
+          "hop2_query": "All of the following are features of systemic Juvenile Rheumatoid Arthritis except All of the following are features of systemic Juvenile Rheumatoid Arthritis exce",
+          "retrieved": [
+            "opt_D",
+            "opt_A",
+            "opt_B",
+            "opt_C"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "66b9ec80-bfe0-485a-89ae-42e666aab572",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "C",
+      "s2_pred": "D",
+      "s3_pred": "C",
+      "question": "Cumulative index is:\n\nA. Russet's periodontal index\nB. Ramjford's periodontal index\nC. PMA (Massler and Schlour)\nD. Gingival index (Loe and Silness)\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "D",
+          "hop2_query": "Cumulative index is Cumulative index is:\n\nA. Russet's periodontal index\nB. Ramjford's periodontal in",
+          "retrieved": [
+            "opt_D",
+            "opt_A",
+            "opt_B",
+            "opt_C"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "4a7410ad-78f0-457e-abf9-b5beb5ec4a1c",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "A",
+      "s3_pred": "D",
+      "question": "Cause of apical periodontitis is/are:\n\nA. Sequel of pulpal diseases\nB. Wedging of foreign object between the teeth\nC. High points in restoration\nD. All of the above\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "A",
+          "hop2_query": "Cause of apical periodontitis is Cause of apical periodontitis is/are:\n\nA. Sequel of pulpal diseases\nB. Wedging o",
+          "retrieved": [
+            "opt_A",
+            "opt_B",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "98ae0eca-84e2-4b3c-95e3-2920fafef1e8",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "A",
+      "s2_pred": "B",
+      "s3_pred": "A",
+      "question": "Multiple canals in mandibular premolars are seen in?\n\nA. Africas\nB. Caucians\nC. Not Recalled\nD. Not Recalled\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "B",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "B",
+          "hop2_query": "Multiple canals in mandibular premolars are seen in Multiple canals in mandibular premolars are seen in?\n\nA. Africas\nB. Caucians\nC. ",
+          "retrieved": [
+            "opt_B",
+            "opt_A",
+            "opt_C",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "A",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    },
+    {
+      "example_id": "cd3ee63d-d3f2-44ea-a18c-dbf9bf1c57cf",
+      "shard": "medmcqa_val_0_1000_bf16",
+      "gold": "D",
+      "s2_pred": "C",
+      "s3_pred": "D",
+      "question": "Bacteria free zone of dentinal caries is\n\nA. a)Zone of decomposed dentin\nB. Zone of bacterial invasion\nC. Zone of decalcification\nD. Zone of dentinal sclerosis\n\nAnswer with a single letter (A, B, C, or D).",
+      "s2": {
+        "pred": "C",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "defect",
+          "failure",
+          "llm_fallback"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "multihop_nolife": true,
+          "use_modularqa": true,
+          "hop1_query_source": "modularqa_cache",
+          "hop1_query": "C",
+          "hop2_query": "Bacteria free zone of dentinal caries is\n\nA Bacteria free zone of dentinal caries is\n\nA. a)Zone of decomposed dentin\nB. Zone",
+          "retrieved": [
+            "opt_C",
+            "opt_A",
+            "opt_B",
+            "opt_D"
+          ],
+          "ablation": {
+            "use_solver": false,
+            "use_premises": false,
+            "use_gate": false,
+            "use_reflection": false,
+            "use_verifier": false,
+            "use_path_score": false,
+            "use_repair": false,
+            "use_rich_hop1": false,
+            "use_bridge_reranker": false,
+            "use_sf_labeler": false,
+            "use_modularqa": true,
+            "use_lifecycle": false
+          }
+        }
+      },
+      "s3": {
+        "pred": "D",
+        "method": "flow_rag",
+        "metadata_keys": [
+          "ablation",
+          "defect",
+          "lifecycle",
+          "locked_slot",
+          "locked_value",
+          "path_score",
+          "repaired",
+          "symbolic_answer",
+          "verified",
+          "verified_llm_answer"
+        ],
+        "avg_locked": null,
+        "status": null,
+        "hops": [],
+        "trace0": {
+          "hop1_query_source": "modularqa_cache",
+          "use_modularqa": true
+        }
+      }
+    }
+  ],
+  "takeaways": [
+    "If s2_only_correct >> s3_only_correct, lifecycle hop-locking is over-constraining MedMCQA.",
+    "Inspect samples_s2_win[*].s3.hops for Option-title locks / wrong locked claims.",
+    "On MedMCQA, prefer S2 (or S3 without Hotpot-trained bridge) unless lifecycle is redesigned."
+  ],
+  "s2_win_symbolic": {
+    "empty": 51,
+    "wrong": 432,
+    "right": 136,
+    "option_title_locks": 484
+  },
+  "s2_win_examples_meta": [
+    {
+      "eid": "62fa6f78",
+      "g": "A",
+      "s2": "A",
+      "s3": "D",
+      "sym": "Category B patients have to undergo imme",
+      "locked": "Option A",
+      "slot": "title(Which of the following statements is true regarding H I N1 Influenza)"
+    },
+    {
+      "eid": "de09d388",
+      "g": "B",
+      "s2": "B",
+      "s3": "D",
+      "sym": "A",
+      "locked": "Option D",
+      "slot": "title(A blue new born presents with cyanosis)"
+    },
+    {
+      "eid": "b1cc4ab0",
+      "g": "A",
+      "s2": "A",
+      "s3": "D",
+      "sym": "Option D",
+      "locked": "PCA",
+      "slot": "answer(Gait apraxia)"
+    },
+    {
+      "eid": "6ccd8adb",
+      "g": "A",
+      "s2": "A",
+      "s3": "C",
+      "sym": "Option C",
+      "locked": "Sedate and reintubate",
+      "slot": "answer(management)"
+    },
+    {
+      "eid": "7f0270fd",
+      "g": "A",
+      "s2": "A",
+      "s3": "C",
+      "sym": "50",
+      "locked": "0%",
+      "slot": "answer(Hep. B)"
+    },
+    {
+      "eid": "a3da135a",
+      "g": "B",
+      "s2": "B",
+      "s3": "C",
+      "sym": "Option D",
+      "locked": "Option C",
+      "slot": "title(A patient presented to emergency with overdose some drug)"
+    },
+    {
+      "eid": "159339f1",
+      "g": "D",
+      "s2": "D",
+      "s3": "C",
+      "sym": "Option D",
+      "locked": "Option C",
+      "slot": "title(All of the following are true regarding Class-II inlay gingival margins preparation except)"
+    },
+    {
+      "eid": "67add9f9",
+      "g": "D",
+      "s2": "D",
+      "s3": "A",
+      "sym": "D",
+      "locked": "Option D",
+      "slot": "title(In Erythroblastosis fetalis not involved is)"
+    }
+  ]
+}

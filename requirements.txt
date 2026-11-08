@@ -1,0 +1,15 @@
+# Lab GPU (conda env `ad`) — pin loosely; Gemma-3 needs recent transformers.
+torch>=2.1.0
+transformers>=4.50.0
+accelerate>=0.27.0
+sentencepiece>=0.1.99
+protobuf>=4.25.0
+datasets>=2.16.0
+huggingface_hub>=0.21.0
+numpy>=1.24.0
+pandas>=2.0.0
+tqdm>=4.66.0
+lightgbm>=4.0.0
+scikit-learn>=1.3.0
+# optional: bitsandbytes for 4bit (not used for Gemma-3 bf16 path)
+# bitsandbytes>=0.42.0

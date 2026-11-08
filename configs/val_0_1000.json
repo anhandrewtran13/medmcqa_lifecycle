@@ -1,0 +1,22 @@
+{
+  "description": "MedMCQA validation shard [0, 1000). Gemma-3 requires bf16 (not 4bit).",
+  "dataset": "medmcqa",
+  "split": "validation",
+  "index_start": 0,
+  "index_end": 1000,
+  "model": "google/gemma-3-4b-it",
+  "load_in_4bit": false,
+  "llm_batch_size": 1,
+  "phase_b_llm_batch_size": 1,
+  "cpu_workers": 4,
+  "use_bridge_reranker": false,
+  "use_sf_labeler": false,
+  "use_pretrained_hop1": false,
+  "medmcqa_answer_as": "letter",
+  "medmcqa_use_explanation_context": true,
+  "medmcqa_domain_patches": true,
+  "medmcqa_ban_option_locks": true,
+  "medmcqa_soft_lock_fallback": true,
+  "smoke_test_llm": true,
+  "run_name": "medmcqa_val_medical_0_1000_bf16"
+}
